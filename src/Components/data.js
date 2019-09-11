@@ -7,6 +7,8 @@ import Description from './description';
 
 const ApiData = () => {
   const [ data, setData ] = useState({});
+  const [ picDate, setPicDate ] = useState(0);
+
 
   useEffect(() => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=x5FPpUb9Y1syghmfXdybQTUIikpLO1KSYf75gYYV')
@@ -23,6 +25,7 @@ const ApiData = () => {
   return (
     // <h1>Data received from API</h1>
     <>
+      {/* <button>Change date for a different image</button>   */}
       <Title title={data.title} />
       <Image 
         imgUrl={data.hdurl || data.url} 
