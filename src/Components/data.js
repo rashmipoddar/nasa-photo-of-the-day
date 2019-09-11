@@ -9,7 +9,7 @@ const ApiData = () => {
   const [ data, setData ] = useState({});
 
   useEffect(() => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=x5FPpUb9Y1syghmfXdybQTUIikpLO1KSYf75gYYV')
       .then(response => {
         // console.log('The api response is', response);
         const dataReceived = response.data;
