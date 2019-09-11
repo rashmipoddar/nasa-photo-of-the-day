@@ -12,7 +12,7 @@ const DateSetter = () => {
 
   return (
     <DatePicker 
-    onSelected={startDate}
+    selected={startDate}
     onChange={handleChange}
     />
   )

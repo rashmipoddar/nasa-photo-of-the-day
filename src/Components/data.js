@@ -7,8 +7,6 @@ import Description from './description';
 
 const ApiData = () => {
   const [ data, setData ] = useState({});
-  const [ picDate, setPicDate ] = useState(0);
-
 
   useEffect(() => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=x5FPpUb9Y1syghmfXdybQTUIikpLO1KSYf75gYYV')
