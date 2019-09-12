@@ -3,14 +3,14 @@ import "./App.css";
 
 import ApiData from "./Components/ApiData";
 import Logo from "./Components/logo";
-import DateSetter from "./Components/datePicker";
+import DateSetter from "./Components/dateSetter";
 
 function App() {
   return (
     <div className="App">
       <Logo />
       <DateSetter />
-      <ApiData />
+      {/* <ApiData /> */}
     </div>
   );
 }

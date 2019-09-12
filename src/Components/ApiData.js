@@ -3,11 +3,18 @@ import axios from 'axios';
 
 import Content from './Content';
 
-const ApiData = () => {
+const ApiData = (props) => {
   const [ data, setData ] = useState({});
+  const year  = (props.date.getFullYear()).toString();
+  const month = props.date.getMonth() + 1;
+  const day   = props.date.getDate(); 
+  
+  const date = year.concat('-', month, '-', day);
+  
+
 
   useEffect(() => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=x5FPpUb9Y1syghmfXdybQTUIikpLO1KSYf75gYYV')
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=x5FPpUb9Y1syghmfXdybQTUIikpLO1KSYf75gYYV&date=${date}`)
       .then(response => {
         // console.log('The api response is', response);
         const dataReceived = response.data;
@@ -16,7 +23,7 @@ const ApiData = () => {
       .catch(error => {
         console.log('Error in getting data ', error);
       })
-  }, [])
+  }, [date])
 
   return (
     <Content 
@@ -26,7 +33,7 @@ const ApiData = () => {
       copyright={data.copyright}   
       explanation={data.explanation}   
     />
-)
+  )
 }
 
 export default ApiData;

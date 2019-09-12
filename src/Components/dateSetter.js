@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 
+import ApiData from './ApiData';
 import "react-datepicker/dist/react-datepicker.css";
 
 const DateSetter = () => {
@@ -11,10 +12,13 @@ const DateSetter = () => {
   }
 
   return (
-    <DatePicker 
-    selected={startDate}
-    onChange={handleChange}
-    />
+    <>
+      <DatePicker 
+      selected={startDate}
+      onChange={handleChange}
+      />
+      <ApiData date={startDate}/>
+    </>  
   )
 }
 
