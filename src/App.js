@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import ApiData from "./Components/data";
+import ApiData from "./Components/ApiData";
 import Logo from "./Components/logo";
 import DateSetter from "./Components/datePicker";
 

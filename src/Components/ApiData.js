@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
-import Title from './title';
-import Image from './image';
-import Description from './description';
+import Content from './Content';
 
 const ApiData = () => {
   const [ data, setData ] = useState({});
@@ -21,18 +19,14 @@ const ApiData = () => {
   }, [])
 
   return (
-    // <h1>Data received from API</h1>
-    <>
-      {/* <button>Change date for a different image</button>   */}
-      <Title title={data.title} />
-      <Image 
-        imgUrl={data.hdurl || data.url} 
-        date={data.date}
-        copyright={data.copyright}      
-      />
-      <Description explanation={data.explanation} />
-    </>
-  )
+    <Content 
+      title={data.title}
+      imgUrl={data.hdurl || data.url} 
+      date={data.date}
+      copyright={data.copyright}   
+      explanation={data.explanation}   
+    />
+)
 }
 
 export default ApiData;
