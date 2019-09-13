@@ -1,12 +1,12 @@
 .App {
-  /* text-align: center;
+  text-align: center;
   width: 1000px;
   margin: 10px auto;
-  padding: 10px; */
-  /* background-image: url('./Images/Universe.jpg'); */
+  padding: 10px; 
+  background-image: url('./Images/Universe.jpg');
 }
 
-/* .App-logo {
+.App-logo {
   width: 200px;
   object-fit: contain;
   animation: App-logo-spin infinite 20s linear;
@@ -40,4 +40,4 @@
 
 .mainImg {
   max-width: 100%;
-} */
+}

@@ -1,10 +1,18 @@
 import React from 'react';
-import logo from '../Images/nasa_logo.png';
+import styled from 'styled-components';
+
+import logo from '../Images/nasa.svg';
+
+const LogoStyle = styled.img`
+  width: 200px;
+  object-fit: cover;
+  background-blend-mode: darken;
+`;
 
 const Logo = () => {
 
   return (
-    <img className="App-logo" src={logo} alt='nasa-logo'></img>
+    <LogoStyle src={logo} alt='nasa-logo'/>
   )
 }
 

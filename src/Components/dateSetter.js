@@ -13,13 +13,11 @@ const DateSetter = () => {
 
   return (
     <>
-      <ApiData date={startDate}/>
-      
-      <DatePicker 
+      <DatePicker className="text-right" 
       selected={startDate}
       onChange={handleChange}
       />
-      
+      <ApiData date={startDate}/>
     </>  
   )
 }
